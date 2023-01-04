@@ -1,0 +1,21 @@
+<button
+  class="btn btn-primary"
+  (click)="toggleContent()"
+>Display Details</button>
+<p *ngIf="showContent">display-details works!</p>
+<!--<ul>
+  <li
+    [ngStyle]="{backgroundColor: showBlueBackground()}"
+    [ngClass]="{'after-five': showWhiteColor()}"
+    *ngFor="let c of clickLog"
+  >{{c}}</li>
+</ul>-->
+<p
+  *ngFor="let c of clickLog"
+  >
+  <span
+    [ngStyle]="{backgroundColor: showBlueBackground(c)}"
+    [ngClass]="{'after-five': showWhiteColor(c)}"
+  >{{c}}</span>
+</p>
+

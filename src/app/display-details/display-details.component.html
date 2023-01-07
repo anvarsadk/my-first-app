@@ -18,4 +18,9 @@
     [ngClass]="{'after-five': showWhiteColor(c)}"
   >{{c}}</span>
 </p>
+<div
+  *ngFor="let t of clickLogTime; let i = index"
+  [ngStyle]="{backgroundColor: showBlueBackground(i+1)}"
+  [ngClass]="{'after-five': showWhiteColor(i+1)}"
+>{{ t }}</div>
 

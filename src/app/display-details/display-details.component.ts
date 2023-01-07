@@ -11,10 +11,12 @@ export class DisplayDetailsComponent implements OnInit {
   // clickCount = 0;
   // bgColor = 'white';
   // showColor = false;
+  clickLogTime = [];
 
   toggleContent() {
     this.showContent = !(this.showContent);
     this.clickLog.push(this.clickLog.length+1);
+    this.clickLogTime.push(new Date());
     /*if(this.clickCount==5) {
       this.bgColor = 'blue';
       this.showColor = true;
